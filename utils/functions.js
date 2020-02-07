@@ -27,3 +27,8 @@ export const buttonHeight = (margin = 0) => {
   const fixedHeight = Platform.OS === 'ios' ? height - 360 : height - 310
   return fixedHeight - margin
 }
+
+export const currencyFormat = (number) => parseFloat(number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+
+
+export const logx = (obj) => console.log(JSON.stringify(obj, null, 2))
